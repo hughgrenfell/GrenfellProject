@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta id="siteSetup" name="investmentDecisionTool"></meta>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <script type="text/javascript" src="../templates/siteSetup.js"></script>
+    <script src="../javascript/investmentDecisionTool.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', {packages: ['corechart']});
+    </script>
+</head>
+
+<body>
+    <script language="javascript" type="text/javascript" src="../templates/header.js"></script>
+    <section class="titleBlock">
+        <div class="content-wrap item-details divider">
+            <h1>Investment Decision Making Tool</h1>
+        </div>
+    </section>
+
+
+    <section class="toolInput">
+        <h2>Inputs</h2>
+        <div class="grid-container-two">
+            <div class="grid-item">
+            <ul>
+                <li>Select number of stocks to evaluate:
+                    <div class="numOfStocks">
+                        <select name="numOfStockSelector" id="numOfStocksSelector">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                        </select>
+                    </div>
+                <li>Select Indicator:       
+                    <div class="indicator">
+                        <select name="indicatorSelector" id="indicatorSelector">
+                            <option value="currentRatio">Current Ratio</option>
+                            <option value="peRatio">PE Ratio</option>
+                        </select>
+                    </div>
+                </li>
+                <li>Stock Symbol(s): 
+                    <div class="stockSymbol" id="stockSymbol">
+                        <select name="stockSymbolSelector" id="stockSymbolSelector1">
+                            <option value="cibc">CIBC</option>
+                            <option value="rbc">RBC</option>
+                            <option value="td">TD</option>
+                            <option value="bmo">BMO</option>
+                            <option value="bns">BNS</option>
+                            <option value="na">NA</option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <div class="apiKey">
+                        <p>Enter your API key for FMP Cloud: </p>
+                        <input class="apiKeyEntry" name="apiKeyEntry" id="apiKeyEntry">
+                    </div>
+                </li>
+            </ul>
+            </div>
+            <div class="grid-item" id="jsonTable"></div>
+        </div>
+        <button type="button" id="getDataButton">Download Data</button>
+        <button type="button" id="drawChartButton">Present Data</button>
+    </section>
+
+    <!-- Div that will hold the chart -->
+    <div class="chart" id="chart_div"></div>
+
+</body>
+</html>

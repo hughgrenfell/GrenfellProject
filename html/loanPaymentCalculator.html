@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta id="siteSetup" name="loanPaymentCalculator"></meta>
+        <script type="text/javascript" src="../templates/siteSetup.js"></script>
+        <script type="text/javascript" src="../javascript/loanPaymentCaclulator.js"></script>
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script>
+            google.charts.load('current', {packages: ['corechart', 'bar']});
+        </script>
+    </head>
+    
+    <body>
+        <main>
+            <script language="javascript" type="text/javascript" src="../templates/header.js"></script> 
+            <section class="titleBlock">
+                <div class="content-wrap item-details divider">
+                    <h1>Loan Payment Calculator</h1>
+                </div>
+            </section>
+
+            <div class="grid-container-one">
+                <div class="grid-item"><h2>Input: </h2></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"><h2>Results: </h2></div>
+                <div class="grid-item"></div>
+                <div class="grid-item">Loan Amount: </div>
+                <div class="grid-item input"><input class="money" type="text" name="loanAmount" id="loanAmount" value="100000"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item">Periodic Payment: </div>
+                <div class="grid-item money" id="payment">0</div>
+                <div class="grid-item">Amortization Period: </div>
+                <div class="grid-item input"><input type="text" name="amortizationPeriod" id="amortizationPeriod" value="25"></div>
+                <div class="grid-item">years</div>
+                <div class="grid-item"></div>
+                <div class="grid-item" id="numOfPayments">Total Payments: </div>
+                <div class="grid-item money" id="totalPayment">0</div>
+                <div class="grid-item">Interest Rate: </div>
+                <div class="grid-item input"><input type="text" name="interestRate" id="interestRate" value="3"></div>
+                <div class="grid-item">%</div>
+                <div class="grid-item"></div>
+                <div class="grid-item">Total Interest: </div>
+                <div class="grid-item money" id="totalInterest">0</div>
+                <div class="grid-item">Payment Frequency: </div>
+                <div class="grid-item">
+                    <select name="paymentFrequency" id="paymentFrequency">
+                        <option value="monthly">Monthly</option>
+                        <option value="biMonthly">Bi-Monthly</option>
+                        <option value="biWeekly">Bi-Weekly</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="button" id="calculateButton">Calculate</button>
+
+            <!-- Div that will hold the chart -->
+            <div class="chart" id="chart_div"></div>
+        </main>
+    </body>
+</html>
