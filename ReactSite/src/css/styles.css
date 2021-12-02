@@ -1,0 +1,264 @@
+/*  
+Colour Palette
+https://coolors.co/031927-427aa1-828489-fcf7f8-c8ad55
+#828489 Gray Web
+#FCF7F8 Snow
+#C8AD55 Vegas Gold
+*/
+
+/* CSS Reset */
+/* -------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* Global Styles */
+/* -------------------------------------------------------- */
+html {
+  box-sizing: border-box;
+  background: #fcf7f8 /*Snow*/;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body,
+label,
+input,
+select {
+  color: #828489 /*Gray Web*/;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow: hidden;
+}
+button {
+  background-color: #828489; /*Gray Web*/
+  color: #fcf7f8; /*Snow*/
+  font-size: 20px;
+  border-radius: 4px;
+  padding: 3px;
+  margin-bottom: 15px;
+}
+button:hover {
+  color: #c8ad55; /*Vegas Gold*/
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+}
+img {
+  width: 300px;
+}
+a {
+  color: #828489 /*Gray Web*/;
+  text-decoration: none;
+  padding: 0;
+}
+a:hover {
+  color: #c8ad55 /*Vegas Gold*/;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+h1 {
+  font-size: 40px;
+  margin-top: 10px;
+}
+h2 {
+  font-size: 25px;
+}
+h1,
+h2 {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+p {
+  margin-bottom: 15px;
+}
+input {
+  padding-left: 10px;
+}
+.content-wrap {
+  max-width: 1000px;
+  width: 85%;
+  /* use line below to center content */
+  /* margin: 0 auto; */
+  margin: 25px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 20px 0;
+  padding-top: 0;
+}
+
+.divider > section {
+  border-bottom: 1px dashed;
+  padding: 25px 0;
+}
+.divider > section:last-of-type {
+  border-bottom-style: none;
+}
+nav ul {
+  list-style: none;
+  list-style-image: none;
+}
+li {
+  display: list-item;
+  /* text-align: -webkit-match-parent; */
+}
+.money::before {
+  content: "$";
+}
+.panel {
+  width: 30%;
+  padding-left: 20px;
+}
+
+/* Grid Layouts */
+/* -------------------------------------------------------- */
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  white-space: nowrap;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(20px);
+  row-gap: 1ch;
+  margin-bottom: 30px;
+}
+.grid-container-one {
+  display: grid;
+  grid-template-columns: 120px 200px 80px 200px 120px 120px;
+  background-color: #fcf7f8 /*Snow*/;
+  padding: 10px;
+}
+.grid-container-two {
+  display: grid;
+  grid-template-columns: 300px 600px;
+  background-color: #fcf7f8 /*Snow*/;
+  padding: 10px;
+}
+.grid-item {
+  background-color: #fcf7f8 /*Snow*/;
+  padding-top: 10px;
+  font-size: 15px;
+}
+.grid-item input {
+  margin-left: 15px;
+}
+.grid-item select {
+  margin-left: 15px;
+}
+
+/* Tables */
+/* -------------------------------------------------------- */
+
+#renderTable {
+  margin-left: 150px;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+#renderTable td {
+  padding-right: 20px;
+}
+#jsonTable table {
+  border: 2px solid black;
+}
+#jsonTable td {
+  padding: 5px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+#jsonTable th {
+  padding: 5px;
+  border: 1px solid black;
+}
+
+/* JS Meal Planner */
+/* -------------------------------------------------------- */
+.draggable {
+  width: 25%;
+  min-height: 6.5em;
+  margin: 1rem 0 0 1rem;
+  background-color: #29e;
+  color: white;
+  border-radius: 0.75em;
+  padding: 4%;
+  touch-action: none;
+  user-select: none;
+}
+
+/* Header Styles */
+/* -------------------------------------------------------- */
+.site-header {
+  position: relative;
+  display: flex;
+  padding: 0 var(--gap);
+  margin: 0 0 var(--gap);
+  color: #fff /*Snow*/;
+  background-color: #111;
+  white-space: nowrap;
+}
+.site-header .header-site-menu {
+  flex-direction: column;
+  width: 100%;
+  padding-top: 1rem;
+  padding-left: 10px;
+}
+.site-header .main-nav a {
+  height: 100%;
+  color: #fff;
+  padding-left: 1.5rem;
+}
+.site-header .main-nav a:hover {
+  color: #c8ad55 /*Vegas Gold*/;
+}
+.screen-reader-text {
+  font-size: 35px;
+}
+.logo {
+  width: 50px;
+}
+.logo img {
+  width: 55px;
+  padding-left: 10px;
+  padding-right: none;
+  /* float: right; */
+}
+.titleBlock {
+  margin: none;
+}
+
+/* Projects */
+/* -------------------------------------------------------- */
+
+.projects-nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.projects-nav a {
+  padding-right: 20px;
+}
+
+/* Responsive Styles */
+/* -------------------------------------------------------- */
+@media screen and (min-width: 750px) {
+  .project-item img {
+    float: left;
+    margin-right: 20px;
+  }
+  .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+}
